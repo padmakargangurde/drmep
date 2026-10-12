@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Features\Sample\**" />
+    <EmbeddedResource Remove="Features\Sample\**" />
+    <None Remove="Features\Sample\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Constants\" />
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="Common\Behaviors\" />
+    <Folder Include="Common\Pagination\" />
+    <Folder Include="Contracts\ExternalServices\" />
+    <Folder Include="Features\Projects\CQRS\" />
+    <Folder Include="Features\Projects\Helpers\" />
+    <Folder Include="Features\Projects\Mappings\" />
+    <Folder Include="Features\Projects\Validators\" />
+    <Folder Include="Features\Users\CQRS\" />
+    <Folder Include="Features\Users\DTOs\" />
+    <Folder Include="Features\Users\Helpers\" />
+    <Folder Include="Features\Users\Mappings\" />
+    <Folder Include="Features\Users\Validators\" />
+    <Folder Include="Features\Users\Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+</Project>
